@@ -15,7 +15,7 @@ This is a simple boilerplate for getting started with TypeScript game-scripts, i
 
 This repository is a basic boilerplate for getting started
 with TypeScript resources in FiveM. This boilerplate only comes with
-development dependencies needed for TypeScript transpilation, the rest
+development dependencies needed for FiveM-centered TypeScript transpilation, the rest
 is up to you.
 
 *Note: This boilerplate is targeting TypeScript in context of game-scripts,
