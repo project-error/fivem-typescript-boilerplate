@@ -9,6 +9,7 @@ This is a simple boilerplate for getting started with TypeScript game-scripts, i
 
 <div align="center">
 
+[![Depfu](https://badges.depfu.com/badges/d269ca2d36b5d4cf247e66c6400c216d/count.svg)](https://depfu.com/github/project-error/fivem-typescript-boilerplate?project_id=33035)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/project-error/pe-utils/master/LICENSE)
 ![Discord](https://img.shields.io/discord/791854454760013827?label=Our%20Discord)
 </div>
