@@ -1,4 +1,4 @@
-fxversion 'cerulean'
+fx_version 'cerulean'
 name 'FiveM TypeScript Boilerplate'
 author 'Project Error'
 game 'gta5'
