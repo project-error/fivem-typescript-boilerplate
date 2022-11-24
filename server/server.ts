@@ -1,8 +1,8 @@
-import { myRandomData } from './MyOther.server'
+import { myRandomData } from "./MyOther.server";
 
-on('onResourceStart', (resName: string) => {
+on("onResourceStart", (resName: string) => {
   if (resName === GetCurrentResourceName()) {
-    console.log('TypeScript boilerplate started!')
-    console.log(myRandomData)
+    console.log("TypeScript boilerplate started!");
+    console.log(myRandomData);
   }
-})
+});

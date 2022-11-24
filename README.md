@@ -23,13 +23,15 @@ if you wish to use TypeScript in NUI, take a look at our other [boilerplate](htt
 
 ## Foreword
 
-Although there already is a well established TypeScript boilerplate,
-made by [d0p3t](https://github.com/d0p3t/fivem-ts-boilerplate) for the FiveM ecosystem, 
-he has unfortunately passed away, leaving it unmaintained. This boilerplate is simply
-a more up to date alternative.
+This boilerplate was originally based off a previous popular TypeScript boilerplate,
+made by [d0p3t](https://github.com/d0p3t/fivem-ts-boilerplate). He heartbeakingly passed
+in 2021, leaving the original unmaintained. This boilerplate was an up-to-date alternative.
+
+Since then, this boilerplate has been updated to take advantage of tooling progress made
+in the greater NPM ecosystem.
 
 ## Requirements
-* Node > v14
+* Node > v16
 
 ## Getting Started
 
@@ -50,7 +52,7 @@ npm i
 ### Hot Building
 
 While developing your resource, this boilerplate offers 
-a `watch`script that will automatically hot rebuild on any
+a `watch` script that will automatically hot rebuild on any
 change within the `client` or `server` directories.
 
 ```sh
@@ -72,7 +74,16 @@ the `build` script.
 ```sh
 npm run build
 ```
+
+## Version < 2.0.0
+
+Version 2.0.0 introduced ESBuild as the primary bundler, removing
+the option for automatic builds through the embedded FXServer webpack builder.
+
+This documentation is preserved for legacy purposes.
+
 ### Automatic Builds (Optional)
+
 *This is not recommended as the embedded version of yarn is 
 ocassionally prone to performance and environment problems. We 
 highly recomend, you manually run the build script*
