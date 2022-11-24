@@ -4,20 +4,18 @@
   "description": "A boilerplate for TypeScript in FiveM",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development"
+    "build": "npm run typecheck && node build/build-bundle.js",
+    "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
+    "watch": "cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
   },
   "author": "Project Error",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "@citizenfx/client": "^2.0.5012-1",
-    "@citizenfx/server": "^2.0.5012-1",
-    "@types/node": "^16.11.10",
-    "clean-webpack-plugin": "^4.0.0",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.5.2",
-    "webpack": "^5.64.4",
-    "webpack-cli": "^4.9.1"
+    "@citizenfx/client": "^2.0.6063-1",
+    "@citizenfx/server": "^2.0.6063-1",
+    "@types/node": "^16.18.3",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.15.15",
+    "typescript": "^4.5.2"
   }
 }
