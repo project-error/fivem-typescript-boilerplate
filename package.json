@@ -4,9 +4,10 @@
   "description": "A boilerplate for TypeScript in FiveM",
   "main": "index.js",
   "scripts": {
-    "build": "npm run typecheck && node build/build-bundle.js",
+    "build": "npm run clearbuild && npm run typecheck && node build/build-bundle.js",
+    "clearbuild": "rimraf ./dist",
     "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
-    "watch": "cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
+    "watch": "npm run clearbuild && cross-env IS_WATCH_MODE=1 node build/build-bundle.js"
   },
   "author": "Project Error",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "@types/node": "^16.18.3",
     "cross-env": "^7.0.3",
     "esbuild": "^0.15.15",
+    "rimraf": "^3.0.2",
     "typescript": "^4.9.3"
   }
 }
