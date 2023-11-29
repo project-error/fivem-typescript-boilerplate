@@ -14,7 +14,7 @@
   "devDependencies": {
     "@citizenfx/client": "^2.0.6063-1",
     "@citizenfx/server": "^2.0.6063-1",
-    "@types/node": "^20.6.4",
+    "@types/node": "^20.10.1",
     "cross-env": "^7.0.3",
     "esbuild": "^0.19.3",
     "rimraf": "^5.0.1",
