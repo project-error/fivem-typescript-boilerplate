@@ -29,26 +29,13 @@ const buildBundle = async () => {
     for (const targetOpts of TARGET_ENTRIES) {
       const mergedOpts = { ...baseOptions, ...targetOpts };
 
+      const context = await esbuild.context(mergedOpts);
+
       if (IS_WATCH_MODE) {
-        mergedOpts.watch = {
-          onRebuild(error) {
-            if (error)
-              console.error(
-                `[ESBuild Watch] (${targetOpts.entryPoints[0]}) Failed to rebuild bundle`
-              );
-            else
-              console.log(
-                `[ESBuild Watch] (${targetOpts.entryPoints[0]}) Sucessfully rebuilt bundle`
-              );
-          },
-        };
-      }
-
-      const { errors } = await esbuild.build(mergedOpts);
-
-      if (errors.length) {
-        console.error(`[ESBuild] Bundle failed with ${errors.length} errors`);
-        process.exit(1);
+        await context.watch();
+      } else {
+        await context.rebuild();
+        context.dispose();
       }
     }
   } catch (e) {
