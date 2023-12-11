@@ -16,7 +16,7 @@
     "@citizenfx/server": "^2.0.6063-1",
     "@types/node": "^20.6.4",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.19.3",
+    "esbuild": "^0.19.9",
     "rimraf": "^5.0.1",
     "typescript": "^5.2.2"
   }
